@@ -1,5 +1,5 @@
-# {{ Course Name }}
-## Full Stack Course - {{ Start Date }}
+# HTML&CSS
+## Full Stack Course - January 2022
 
 ### ✏️ Homework
 
