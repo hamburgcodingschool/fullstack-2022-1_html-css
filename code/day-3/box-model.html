@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box-Model</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    div {
+      width: 200px;
+      height: 100px;
+      padding: 20px;
+      border: 5px solid #000;
+      margin: 20px;
+      display: inline-block;
+      position: absolute;
+    }
+
+    section {
+      margin: 0 auto;
+      width: 50%;
+      position: relative;
+    }
+
+    .blue {
+      background-color: blue;
+      left: 0;
+      top: 0;
+    }
+    .yellow {
+      background-color: yellow;
+      left: 50px;
+      top: 20px;
+    }
+    .red {
+      background-color: red;
+      left: 100px;
+      top: 40px;
+    }
+
+    
+
+  </style>
+</head>
+<body>
+  <!-- 3 boxen -->
+  <section>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore est soluta cum quod culpa nisi quam eaque fugiat libero eos quia placeat optio, laborum atque laboriosam nulla voluptate assumenda? Dicta.
+    <div class="blue"></div>
+    <div class="yellow"></div>
+    <div class="red"></div>
+  </section>
+
+  
+
+</body>
+</html>
