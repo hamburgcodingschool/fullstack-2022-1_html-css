@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>media queries</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      height: 90vh;
+      align-items: stretch;
+    }
+    nav, main {
+      background-color: #999;
+    }
+    nav {
+      flex-basis: 200px;
+    }
+    main {
+      flex-grow: 1;
+    }
+    @media screen and (max-width: 800px) {
+      .container {
+        flex-direction: column;
+      }
+      nav {
+        flex-basis: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>menu</nav>
+    <main>inhalt</main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tooltip</title>
+  <style>
+    :root {
+      /* declare variables*/
+      --tooltip-bg: yellow;
+      --base-tooltip-width: 300px; 
+    }
+
+    body {
+      width: 600px;
+      margin: 150px auto 0;
+      font-size: 30px;  
+    }
+
+    .link {
+      position: relative;
+    }
+
+    .tooltip {
+      display: block;
+      visibility: hidden;
+      position: absolute; top: -120px; left: 0;
+      width: var(--base-tooltip-width);
+      padding: calc(var(--base-tooltip-width) / 10);
+      background-color: var(--tooltip-bg);
+      font-size: 16px;
+    }
+
+    .link:hover .tooltip {
+      visibility: visible;
+    }
+
+    .link:not(:hover) .tooltip {
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="link">
+    <a href="#">
+      link
+    </a>
+    <span class="tooltip">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam similique laudantium reiciendis.
+    </span>
+  </div>
+</body>
+</html>
