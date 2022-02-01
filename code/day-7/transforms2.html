@@ -7,13 +7,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>transforms&transitions</title>
   <style>
-    @keyframes blink1 {
+    @keyframes bg-change-out {
       0% {
-        background-color: #ccc;
+        background-color: blue;
+      }
+
+      50% {
+        background-color: yellow;
       }
 
       100% {
         background-color: #000;
+      }
+    }
+
+    @keyframes bg-change-in {
+      0% {
+        background-color: #000;
+      }
+
+      25% {
+        background-color: white;
+      }
+      
+      50% {
+        background-color: yellow;
+      }
+
+      100% {
+        background-color: blue;
       }
     }
 
@@ -30,7 +52,7 @@
     }
 
     nav {
-      background-color: #ccc;
+      background-color: blue;
       width: 200px;
       transform: translateX(-180px);
       transition: transform ease-in-out 1s;
@@ -39,8 +61,11 @@
     nav:hover {
       background-color: #000;
       transform: translateX(0);
-      animation-name: blink1;
-      animation-duration: 1000ms;
+      animation: bg-change-out 1000ms;
+    }
+
+    nav:not(:hover) {
+      animation: bg-change-in 1000ms;
     }
   </style>
 </head>

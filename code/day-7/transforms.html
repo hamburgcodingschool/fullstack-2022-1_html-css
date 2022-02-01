@@ -8,6 +8,7 @@
   <style>
     * {
       box-sizing: border-box;
+      font-family: sans-serif;
     }
     body {
       display: flex;
@@ -20,12 +21,22 @@
     nav {
       background-color: #ccc;
       width: 200px;
-      transform: translateX(-150px);
-      transition: transform ease-in-out 1s;
     }
 
-    nav:hover {
-      transform: translateX(0);
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      transition: all ease-in-out 0.1s;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    li:hover {
+      transform: rotateZ(10deg);
+      font-weight: bold;
+      color: red;
     }
 
 
