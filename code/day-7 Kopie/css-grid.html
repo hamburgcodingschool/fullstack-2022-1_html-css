@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css-grid</title>
+  <style>
+    .wireframe {
+      background-color: #000;
+      color: #fff;
+      font-size: 30px;
+    }
+
+    #page {
+      display: grid;
+      grid-template-areas: 
+        "header header"
+        "sidebar content"
+        "sidebar content";
+      grid-template-columns: 200px auto;
+      grid-template-rows: auto;
+      gap: 2px;
+    }
+
+    nav {
+      grid-area: header;
+    }
+
+    aside {
+      grid-area: sidebar;
+    }
+
+    section {
+      grid-area: content;
+    }
+  </style>
+</head>
+<body>
+  <div id="page">
+    <nav class="wireframe">navigation</nav>
+    <aside class="wireframe">sidebar</aside>
+    <section class="wireframe">content</section>
+  </div>
+</body>
+</html>
