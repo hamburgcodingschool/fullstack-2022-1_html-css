@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css-grid</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    nav, aside, main {
+      background-color: #ccc;
+      font-size: 30px;
+      padding: 20px;
+    }
+
+    #board {
+      width: 50vw;
+      height: 50vw;
+      background-color: blue;
+
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20% 20%;
+      grid-template-rows: 20% 20% 20% 20% 20%;
+    }
+    #queen {
+      background-color: chocolate;
+      grid-row-start: 2;
+      grid-row-end: 4;
+      grid-column-start: 3;
+      grid-column-end: span 2;
+    }
+    #king {
+      background-color: blueviolet;
+      grid-row-start: 2;
+      grid-row-end: 4;
+      grid-column-start: 3;
+      grid-column-end: span 2;
+    }
+    #page {
+      width: 50vw;
+      display: grid;
+      gap: 2px;
+      grid-template-areas: 
+        "header header header header menu"
+        "content content content content menu"
+        "content content content content menu";
+    }
+    nav {
+      grid-area: header;
+    }
+    aside {
+      grid-area: menu;
+    }
+    main {
+      grid-area: content;
+    }
+  </style>
+</head>
+<body>
+  <div id="page">
+    <nav>nav</nav>
+    <aside>aside</aside>
+    <main>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sequi mollitia illo numquam, ab obcaecati fugiat soluta, rem facere suscipit tenetur ea harum tempore fuga quaerat iure sed perspiciatis beatae!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sequi mollitia illo numquam, ab obcaecati fugiat
+        soluta, rem facere suscipit tenetur ea harum tempore fuga quaerat iure sed perspiciatis beatae!</p>
+      </main>
+  </div>
+
+
+
+
+
+  <!--div id="board">
+      <div id="queen"></div>
+      <div id="king"></div>
+    </div-->
+</body>
+</html>
